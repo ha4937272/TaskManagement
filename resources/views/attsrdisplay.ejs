@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -290,10 +290,10 @@
 <div class="content">
 <div class="page-header">
 <div class="page-title">
-<h4>User List</h4>
+<h4>SUser List</h4>
 </div>
 <div class="page-btn">
-<a href="user/add" class="btn btn-added"><img src="../../assets/img/icons/plus.svg" alt="img" class="me-2">Add User</a>
+<a href="attsr/add" class="btn btn-added"><img src="../../assets/img/icons/plus.svg" alt="img" class="me-2">Add Attsr</a>
 </div>
 </div>
 
@@ -335,30 +335,14 @@
 <thead>
 <tr>
 
-<th>User Id</th>
-<th>First name </th>
-<th>Last name </th>
-<th>Email</th>
-<th>Password</th>
-<th>Edit</th>
+<th>Attachment Serial Id</th>
 </tr>
 </thead>
 <tbody>
-    <% users.forEach(function(user1) { %>
+    <% attsrs.forEach(function(attsr1) { %>
 <tr>
 
-    <td> <%= user1.userid %></td>
-    <td> <%= user1.fname %></td>
-    <td ><%= user1.lname %></td>
-    <td ><%= user1.email %></td>
-    <td ><%= user1.password %></td>
-
-<td>
-<a class="me-3" href="/user/edit/<%= user1.userid %>">
-<img src="../../assets/img/icons/edit.svg" alt="img">
-</a>
-</td>
-
+    <td> <%= attsr1.aid %></td>
 </tr>
 <% }) %>
 </tbody>

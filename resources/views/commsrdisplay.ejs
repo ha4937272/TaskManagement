@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -290,10 +290,10 @@
 <div class="content">
 <div class="page-header">
 <div class="page-title">
-<h4>User List</h4>
+<h4>Commsr List</h4>
 </div>
 <div class="page-btn">
-<a href="user/add" class="btn btn-added"><img src="../../assets/img/icons/plus.svg" alt="img" class="me-2">Add User</a>
+<a href="commsr/add" class="btn btn-added"><img src="../../assets/img/icons/plus.svg" alt="img" class="me-2">Add Commsr</a>
 </div>
 </div>
 
@@ -335,30 +335,14 @@
 <thead>
 <tr>
 
-<th>User Id</th>
-<th>First name </th>
-<th>Last name </th>
-<th>Email</th>
-<th>Password</th>
-<th>Edit</th>
+<th>Commsr Id</th>
 </tr>
 </thead>
 <tbody>
-    <% users.forEach(function(user1) { %>
+    <% commsrs.forEach(function(commsr1) { %>
 <tr>
 
-    <td> <%= user1.userid %></td>
-    <td> <%= user1.fname %></td>
-    <td ><%= user1.lname %></td>
-    <td ><%= user1.email %></td>
-    <td ><%= user1.password %></td>
-
-<td>
-<a class="me-3" href="/user/edit/<%= user1.userid %>">
-<img src="../../assets/img/icons/edit.svg" alt="img">
-</a>
-</td>
-
+    <td> <%= commsr1.cid %></td>
 </tr>
 <% }) %>
 </tbody>

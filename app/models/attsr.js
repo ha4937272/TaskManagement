@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const attsrSchema = new mongoose.Schema({
-  aid: { type: Number, default:5000},
+  aid: { type: Number},
 });
 
 const Attsr = mongoose.model('Attsr', attsrSchema);

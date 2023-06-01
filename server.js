@@ -14,6 +14,7 @@ const mongoose = require('mongoose')
 
 
 // Database connection
+/*
 mongoose.set('strictQuery', false);
 mongoose.connect('mongodb://localhost:27017/taskmanagement',
   {
@@ -26,6 +27,19 @@ db.on("error", console.error.bind(console, "connection error: "));
 db.once("open", function () {
   console.log("Connected successfully");
 });
+*/
+mongoose.set('strictQuery', false);
+const connectDB = async () => {
+  try {
+    const conn = await mongoose.connect(process.env.MONGO_URI);
+    console.log(`MongoDB Connected: ${conn.connection.host}`);
+  } catch (error) {
+    console.log(error);
+    process.exit(1);
+  }
+}
+
+
 
 
 // Session store
@@ -76,8 +90,9 @@ app.set('view engine', 'ejs')
 
 require('./routes/web')(app)
 
+connectDB().then(() => {
 const server = app.listen(PORT , () => {
             console.log(`Listening on port ${PORT}`)
         })
-
+      })
 
